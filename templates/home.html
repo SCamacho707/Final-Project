@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav role="navigation">
+        <a href="{{ url_for('home') }}" aria-label="Go to Home Page">Home</a>
+        <a href="{{ url_for('login') }}" class="btn" role="button" aria-label="Login to Budget Tracker">Login</a>
+        <a href="{{ url_for('register') }}" class="btn" role="button" aria-label="Register for Budget Tracker">Register</a>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <h1>Welcome to Budget Tracker</h1>
+        <p>Manage your expenses and track your budget efficiently.</p>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Budget Tracker
+    </footer>
+
+</body>
+</html>

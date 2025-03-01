@@ -1,0 +1,6 @@
+streamlit
+pytest
+bcrypt
+pandas
+matplotlib
+sqlite3

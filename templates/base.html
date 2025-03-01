@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        /* Navigation bar */
+        nav {
+            background-color: #333;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Main content */
+        main {
+            max-width: 600px;
+            background: white;
+            padding: 30px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            margin: 10px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav role="navigation">
+        <a href="#" aria-label="Home">Home</a>
+        <a href="#" aria-label="Dashboard">Dashboard</a>
+        <a href="#" aria-label="Set Budget">Set Budget</a>
+        <a href="#" aria-label="Logout">Logout</a>
+    </nav>
+
+    <!-- Main content -->
+    <main>
+        <h1>Welcome to Budget Tracker</h1>
+        <p>Manage your expenses and track your budget efficiently.</p>
+        
+        <a href="#" class="btn" role="button" aria-label="Login to your account">Login</a>
+        <a href="#" class="btn" role="button" aria-label="Register for an account">Register</a>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 My Website</p>
+    </footer>
+
+</body>
+</html>

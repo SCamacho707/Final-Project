@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav role="navigation">
+        <a href="{{ url_for('home') }}" aria-label="Go to Home">Home</a>
+        <a href="{{ url_for('set_budget') }}" aria-label="Set Your Budget">Set Budget</a>
+        <a href="{{ url_for('logout') }}" class="btn logout-btn" role="button" aria-label="Logout from Budget Tracker">Logout</a>
+    </nav>
+
+    <!-- Main Dashboard Content -->
+    <main class="container">
+        <h1>Dashboard</h1>
+        <h2>Budget Goal: ${{ budget_goal }}</h2>
+        <h2>Remaining Budget: ${{ remaining_budget }}</h2>
+        <h2>Total Income: ${{ total_income }}</h2>
+        <h2>Total Expense: ${{ total_expense }}</h2>
+
+        <h3>Expense Breakdown</h3>
+        {% if chart %}
+            <img src="{{ chart }}" alt="Expense Breakdown Chart">
+        {% else %}
+            <p>No expenses yet.</p>
+        {% endif %}
+
+        <h3>Add New Transaction</h3>
+        <form action="{{ url_for('add_transaction') }}" method="POST">
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category" placeholder="Category" required aria-label="Enter transaction category">
+
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" name="amount" placeholder="Amount" required step="0.01" aria-label="Enter transaction amount">
+
+            <label for="type">Transaction Type:</label>
+            <select id="type" name="type" aria-label="Select transaction type">
+                <option value="expense">Expense</option>
+                <option value="income">Income</option>
+            </select>
+
+            <button type="submit" class="btn" role="button">Add Transaction</button>
+        </form>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2025 Budget Tracker
+    </footer>
+
+</body>
+</html>
